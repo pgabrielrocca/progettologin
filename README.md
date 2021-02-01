@@ -26,8 +26,7 @@ Il percorso utente è molto semplice e intuitivo, grazie anche alla UX creata co
 Abbiamo sviluppato l'app per step (seguendo quindi una mappa logica collegata alle azioni dell'utente).
 <br>
 <br>
-Per la realizzazione grafica, abbiamo impiegato 6h ca. in modalità Pair Programming.  <br>
-Per la realizzazione meccanica
+Per la realizzazione, abbiamo impiegato +22h ca. in modalità Pair Programming, con una media di 5 ore al giorno. <br>
 </p>
 
 <h2> II: Convenzioni utilizzate </h2>
