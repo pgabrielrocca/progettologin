@@ -3,12 +3,7 @@
 <h1> Indice </h1>
 I: Introduzione <br>
 II: Convenzioni utilizzate <br>
-III: Login <br>
-IV: Registrazione <br>
-V: Home Utente <br>
-VI: Modifica password <br>
-VII: Home Admin <br>
-VIII: Gestione Utenti <br>
+
 
 
 <h2> I: Introduzione </h2>
