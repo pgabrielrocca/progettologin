@@ -23,7 +23,14 @@ public class User implements Serializable {
         this.username = username;
         this.password = password;
         this.admin = admin;
+    }
 
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public User() {
     }
 
     public static int getId() {

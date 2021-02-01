@@ -16,7 +16,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText username, password;
     Button accessButton;
     TextView linkRegister;
-    static boolean isSuperUserCreated;
+    private boolean usernameFound = true, correctPassword = true;
+    static boolean isAdminCreated = false;
     User userForAuthenticate;
     private static ArrayList<User> userArrayList;
 
@@ -46,8 +47,52 @@ public class LoginActivity extends AppCompatActivity {
         accessButton = findViewById(R.id.button_Access_Login_HomeUser);
         linkRegister = findViewById(R.id.textView_LinkRegister_Login_Register);
 
-        if(newPasswordToSave.length() != 0){
-            if(confirmingPassword.length() != 0 && confirmingPassword.equals(newPasswordToSave)){
+        if (!isAdminCreated){
+            User admin = new User("admin", "admin", true);
+            ArrayList<User> firstList = new ArrayList<>();
+            firstList.add(admin);
+            setUserArrayList(firstList);
+            isAdminCreated = true;
+        }
 
+        accessButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                User user = new User();
+                user.setPassword(password.getText().toString());
+                user.setUsername(username.getText().toString());
+                controllUsername(user);
+            }
+            private void startHome(User user){
+                Intent intent = new Intent (LoginActivity.this, HomeActivity.class);
+                userForAuthenticate.setUsername(user.getUsername());
+                userForAuthenticate.setPassword(user.getPassword());
+                userForAuthenticate.setCity(user.getCity());
+                userForAuthenticate.setBirthdate(user.getBirthdate());
+                userForAuthenticate.setAdmin(user.isAdmin());
+                intent.putExtra("com.example.progettologin2.User", userForAuthenticate);
+                startActivity(intent);
+            }
+            private void controllUsername(User user){
+                if(username.getText().toString().length() != 0) {
+                    for (User userToScan: getUserArrayList()){
+                        if (username.getText().toString().equals(userToScan.getUsername())){
+                            controllPassword(userToScan);
+                        }
+                        username.setError("Username non trovato");
+                    }
+                }
+                username.setError("Campo vuoto");
+            }
+            private void controllPassword(User user){
+                if (password.getText().toString().length() != 0) {
+                    if (password.getText().toString().equals(user.getPassword())){
+                        startHome(user);
+                    }
+                    password.setError("Password errata");
+                }
+                password.setError("Campo vuoto");
+            }
+        });
     }
 }
