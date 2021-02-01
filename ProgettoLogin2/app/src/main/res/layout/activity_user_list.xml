@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/z" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="4dp"
+                            android:paddingTop="17dp"
+                            android:text="Utente"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:layout_width="160dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/teal_750"
+                            android:text="Promuovi Admin"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:id="@+id/button_PromoteAdmin_UserList"/>
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/boss_512"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="520dp">
+
+            <ListView
+                android:id="@+id/listView_UserList_UserList"
+                android:layout_width="match_parent"
+                android:layout_height="520dp" />
+
+        </LinearLayout>
+
+        <!--<Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <Button
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/teal_750"
+                android:text="Home"
+                android:textAllCaps="false"
+                android:id="@+id/button_Home_UserList"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

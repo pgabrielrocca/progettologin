@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="140dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal"
+            android:text="Login"
+            android:fontFamily="cursive"
+            android:textAlignment="center"
+            android:textSize="60dp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="70dp"/>
+
+        <!-- Form di accesso -->
+
+        <!-- Username -->
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:hint="Username:"
+            android:id="@+id/editText_InsertUsername_Login"/>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="10dp"/>
+
+        <!-- Layout Password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Password -->
+
+            <EditText
+                android:id="@+id/editText_InsertPassword_Login"
+                android:layout_width="227dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:hint="Password:"
+                android:inputType="textPassword"/>
+
+            <!-- Occhio della visibilità password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton_VisibilityPassword_Login"
+                app:passwordToggleEnabled="true"/>
+
+            <!-- Occhio della visibilità password -->
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_visibility"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Chiusura Form di accesso -->
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+
+        <!-- Bottone Accedi -->
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_700"
+            android:text="Accedi"
+            android:textAllCaps="false"
+            android:id="@+id/button_Access_Login_HomeUser"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <!-- Link registrazione nuovo utente -->
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@color/teal_750"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:id="@+id/textView_LinkRegister_Login_Register"
+            android:onClick="handleOnClick"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

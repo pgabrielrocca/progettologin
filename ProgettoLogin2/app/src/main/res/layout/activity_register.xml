@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <!-- Activity Scrollabile -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical">
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_horizontal"
+        android:text="Registrati"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        android:textSize="60dp"/>
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="80dp"/>
+
+    <!-- Form di registrazione -->
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:hint="Username:"
+        android:id="@+id/editText_CreateUsername_Register"/>
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="231dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:hint="Password:"
+            android:id="@+id/editText_CreatePassword_Register"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_visibility"
+            android:backgroundTint="@color/white"
+            android:id="@+id/imageButton_VisibilityPassword_Login"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:hint="Ripeti Password:"
+        android:id="@+id/editText_ConfirmPassword_Register"/>
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:hint="Città:"
+        android:id="@+id/editText_CityUser_Register"/>
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:hint="Data di Nascita:"
+        android:id="@+id/editText_BirthdateUser_Register"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+
+        <!--Fine Form di registrazione -->
+
+    <!-- Bottone di registrazione -->
+    <Button
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/teal_750"
+        android:text="Registrati!"
+        android:textAllCaps="false"
+        android:id="@+id/button_RegisterUser_Register_Login"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

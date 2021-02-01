@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <!--TODO: Metti gli ID qua, in modifyPassword e UserList
+        TODO: Prepara la base qua, in modify e UserList
+        TODO: Prosegui la documentazione
+        TODO: Pusha tutto
+        TODO: Per Rocky-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <!-- Benvenuto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="Benvenuto "
+                android:textSize="20dp"/>
+            <!-- Username (modificato in onCreate()) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="username"
+                android:textSize="20dp"
+                android:id="@+id/textView_UserNameView_Home"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/z"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Utente"
+                        android:textSize="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="4dp"
+                        android:paddingTop="17dp"/>
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/boss_512"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/teal_700"
+                    android:id="@+id/textView_ModifyPasswordLink_Home"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".49"
+                android:layout_height="match_parent"
+                android:text="USERNAME "
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" |"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".49"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:id="@+id/textView_User_Home"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".49"
+                android:layout_height="match_parent"
+                android:text="PASSWORD "
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" |"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".49"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:id="@+id/textView_Password_Home"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".49"
+                android:layout_height="match_parent"
+                android:text="CITTA' "
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" |"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight=".49"
+                android:gravity="center"
+                android:text=""
+                android:id="@+id/textView_City_Home"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".49"
+                android:layout_height="match_parent"
+                android:text="DATA "
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" |"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".49"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:id="@+id/textView_Data_Home"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_750"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:id="@+id/button_Logout_Home"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_700"
+            android:text="Gestisci utenti"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:id="@+id/button_UserList_Home"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
